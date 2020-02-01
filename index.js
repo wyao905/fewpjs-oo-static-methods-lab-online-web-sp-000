@@ -11,7 +11,7 @@ class Formatter {
   static sanitize(str) {
     let array = str.split("")
     for(let i in array) {
-      if(array[i].search(/[^a-z\d\s'-]/) !== -1) {
+      if(array[i].search(/[^a-z\d\s'-]/i) !== -1) {
         array[i] = ""
       }
     }
