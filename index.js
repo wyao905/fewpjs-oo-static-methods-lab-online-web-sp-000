@@ -12,9 +12,10 @@ class Formatter {
     let array = str.split("")
     for(let i in array) {
       if(array[i].search(/[^a-z\d\s'-]/) !== -1) {
-        array
+        array.splice(i, 1)
       }
     }
+    return array.join("")
   }
   
   static titleize(str) {
