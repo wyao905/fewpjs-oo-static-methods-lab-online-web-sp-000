@@ -12,7 +12,7 @@ class Formatter {
     let array = str.split("")
     for(let i in array) {
       if(array[i].search(/[^a-z\d\s'-]/) !== -1) {
-        array.splice(i, 1)
+        array[i] = ""
       }
     }
     return array.join("")
